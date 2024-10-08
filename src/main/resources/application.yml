@@ -1,0 +1,92 @@
+spring:
+  application:
+    name: bookservice
+
+  profiles:
+    active: aws
+
+---
+server:
+  port: 5000
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookdb
+    username: root
+    password: rootpassword
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    locations: classpath:db/migration
+
+  data:
+    rest:
+      base-path: /api
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+
+---
+server:
+  port: 5000
+
+spring:
+  config:
+    activate:
+      on-profile: local-docker
+
+  datasource:
+    url: jdbc:mysql://mysql-service:3306/bookdb
+    username: root
+    password: rootpassword
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    locations: classpath:db/migration
+
+  data:
+    rest:
+      base-path: /api
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+
+---
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: aws
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    locations: classpath:db/migration
+
+  data:
+    rest:
+      base-path: /
+
+---
