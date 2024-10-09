@@ -3,14 +3,16 @@ USE bookdb;
 DROP TABLE IF EXISTS books CASCADE;
 
 CREATE TABLE books (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
-    isbn VARCHAR(20) NOT NULL UNIQUE,
-    publication_date DATE NOT NULL
+                      ID          BIGINT AUTO_INCREMENT PRIMARY KEY,
+                      COVER_URL   VARCHAR(255)   NULL,
+                      CURRENCY    VARCHAR(3)     NULL,
+                      DESCRIPTION VARCHAR(255)   NULL,
+                      IS_VISIBLE  BIT            NOT NULL,
+                      PRICE       DECIMAL(19, 2) NULL,
+                      TITLE       VARCHAR(255)   NOT NULL,
+                      ISBN        VARCHAR(13)    NOT NULL,
+                      QUANTITY    BIGINT         NULL,
+                      AUTHOR      VARCHAR(255)   NULL,
+                      CONSTRAINT UK_d25ugxfsu9u67yw7clk943quy
+                          UNIQUE (ISBN)
 );
-
-INSERT INTO books (title, author, isbn, publication_date) VALUES
-    ('To Kill a Mockingbird', 'Harper Lee', '978-0446310789', '1960-07-11'),
-    ('1984', 'George Orwell', '978-0451524935', '1949-06-08'),
-    ('The Great Gatsby', 'F. Scott Fitzgerald', '978-0743273565', '1925-04-10');

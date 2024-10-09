@@ -1,0 +1,110 @@
+USE bookdb;
+
+INSERT books(ID, AUTHOR, IS_VISIBLE, CURRENCY, COVER_URL, ISBN, PRICE, QUANTITY, TITLE, DESCRIPTION)
+VALUES (NULL,
+        'Martin, Fowler',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/415rwKnmemL._SX392_BO1,204,203,200_.jpg',
+        '9780201485677',
+        50.93,
+        10,
+        'Refactoring: Improving the Design of Existing Code',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Tom, Hombergs',
+        TRUE,
+        'USD',
+        'https://d2sofvawe08yqg.cloudfront.net/get-your-hands-dirty-on-clean-architecture/hero?1580366612',
+        '9781839211966',
+        24.99,
+        10,
+        'Get Your Hands Dirty on Clean Architecture',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Martin, Fowler',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/51X+r+OdV3L._SX397_BO1,204,203,200_.jpg',
+        '9780321127426',
+        63.91,
+        10,
+        'Patterns of Enterprise Application Architecture',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Martin, Fowler',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/51Pp1zgneWL._SX394_BO1,204,203,200_.jpg',
+        '9780201895421',
+        24.55,
+        10,
+        'Analysis Patterns: Reusable Object Models',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Magnus, Larrson',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/515e7uyNIUL._SX403_BO1,204,203,200_.jpg',
+        '9781789613476',
+        63.00,
+        10,
+        'Microservices with Spring Boot and Spring Cloud',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Craig, Walls',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/41Mno4eQFkL._SX396_BO1,204,203,200_.jpg',
+        '9781617292545',
+        38.87,
+        10,
+        'Spring Boot in Action',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Craig, Walls',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/51xkEqwHOxL._SX397_BO1,204,203,200_.jpg',
+        '9781617294945',
+        44.99,
+        10,
+        'Spring in Action',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Anthony, Accomazzo',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/51CMUOgy8HL._SX384_BO1,204,203,200_.jpg',
+        '9780991344628',
+        59.88,
+        10,
+        'Fullstack React: The Complete Guide to ReactJS and Friends',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        ),
+
+       (NULL,
+        'Joshua, Bloch',
+        TRUE,
+        'USD',
+        'https://images-na.ssl-images-amazon.com/images/I/41JLgmt8MlL._SX402_BO1,204,203,200_.jpg',
+        '9780134685991',
+        54.98,
+        10,
+        'Effective Java',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque. Vel orci porta non pulvinar.'
+        );

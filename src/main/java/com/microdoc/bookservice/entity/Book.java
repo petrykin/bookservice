@@ -1,13 +1,11 @@
 package com.microdoc.bookservice.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.NaturalId;
 
-import java.time.LocalDate;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "books")
@@ -19,15 +17,32 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Title is required")
+    @Column(name = "TITLE")
     private String title;
 
-    @NotBlank(message = "Author is required")
-    private String author;
-
-    @NotBlank(message = "ISBN is required")
+    @Column(name = "ISBN", unique=true)
+    @NaturalId
     private String isbn;
 
-    @NotNull(message = "Publication date is required")
-    private LocalDate publicationDate;
+    @Column(name = "DESCRIPTION")
+    private String description;
+
+    @Column(name = "PRICE")
+    private BigDecimal price;
+
+    @Column(name = "CURRENCY")
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
+
+    @Column(name = "IS_VISIBLE")
+    private boolean isVisible;
+
+    @Column(name = "COVER_URL")
+    private String coverUrl;
+
+    @Column(name = "QUANTITY")
+    private Integer quantity;
+
+    @Column(name = "AUTHOR")
+    private String author;
 }

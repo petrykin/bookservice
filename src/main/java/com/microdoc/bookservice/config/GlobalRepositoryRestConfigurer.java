@@ -9,13 +9,13 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 @Configuration
 public class GlobalRepositoryRestConfigurer implements RepositoryRestConfigurer {
 
-    @Value("${ALLOWED_ORIGINS}")
-    private String[] allowedOrigins;
+    //@Value("${ALLOWED_ORIGINS}")
+    //private String[] allowedOrigins;
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         cors.addMapping("/**")
-                .allowedOrigins(allowedOrigins)  // Your UI's origin
+                .allowedOrigins("http://localhost:3000")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true)
                 .maxAge(3600);

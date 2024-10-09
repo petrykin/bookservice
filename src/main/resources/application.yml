@@ -3,11 +3,11 @@ spring:
     name: bookservice
 
   profiles:
-    active: aws
+    active: local
 
 ---
 server:
-  port: 5000
+  port: 8080
 
 spring:
   config:
